@@ -206,66 +206,21 @@
          and from different devices with distinct camera intrinsics.
       </h2>
     </div>
+
+    <div class="hero-body">
+      <video id="nvs_teaser" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/nvs_teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        On the task of single-image novel view synthesis (NVS), we show that training on <span class="dnerf">MegaScenes</span> leads to generalization to in-the-wild scenes. 
+        All videos shown here are generated using a single image as input, and none of the categories were seen during training.
+      </h2>
+    </div>
+
+
   </div>
 </section>
-
-
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 
 <section class="section hero is-light">
@@ -298,47 +253,76 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
   </div>
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Dataset Collection</h2>
+      </div>
+          <p>
+            We first source and identify potential scene categories from WikiData. 
+            Subsequently, images and metadata for each scene category is downloaded. 
+            Finally, we reconstruct scenes using Structure from Motion (SfM) and clean them using the Doppelgangers pipeline.
+          </p>
+          <img src="./static/images/dataset/dataset_pipeline.jpg"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Dataset Statistics</h2>
+      </div>
+          <p>
+            We show the distribution of the MegaScenes Dataset. 
+            On the left, we depict the frequency of scenes grouped by WikiData class. 
+            This includes only select classes with more than 3,500 scenes; note that a single scene may be an instance of multiple classes. 
+            On the right, we visualize the geospatial distribution of collected scenes worldwide.
+
+          </p>
+          <img src="./static/images/dataset/scene_class_combined_log.png"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- not here yet -->
+
+<section class="section">
+  <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Dataset Collection</h2>
           <p>
             Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
             would be impossible without nerfies since it would require going through a wall.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+          <img src="./static/images/dataset/dataset_pipeline.jpg"/>
+          <!-- <img id="dataset_pipeline" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/images/dataset/dataset_pipeline2.pdf">
+          </img> -->
         </div>
       </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
+    
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <h2 class="title is-3">Statistics</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
@@ -452,17 +436,36 @@
 </section>
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
+  title     = {MegaScenes: Scene-Level View Synthesis at Scale},
   journal   = {ICCV},
-  year      = {2021},
+  year      = {2024},
 }</code></pre>
   </div>
+</section> -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    @misc{
+      tung2024megascenes,
+      title={MegaScenes: Scene-Level View Synthesis at Scale}, 
+      author={Tung, Joseph and Chou, Gene and Cai, Ruojin and Yang, Guandao and Zhang, Kai and Wetzstein, Gordon and Hariharan, Bharath and Snavely, Noah},
+      year={2024},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+    }
+    </code></pre>
+  </div>
 </section>
+
+
 
 
 <footer class="footer">
