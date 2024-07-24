@@ -27,10 +27,6 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
-
-.publication-title {
-}
-
 .publication-banner {
   max-height: parent;
 
@@ -49,6 +45,8 @@ body {
 
 .publication-title {
     font-family: 'Google Sans', sans-serif;
+    font-weight: bold;
+    color:black;
 }
 
 .publication-authors {
@@ -87,6 +85,11 @@ body {
 
 .publication-authors {
   /*color: #4286f4;*/
+}
+
+.publication-venue {
+  display: inline-block;
+  overflow: hidden;
 }
 
 .publication-video {
